@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 button{
     font-size: 1em;
     font-weight: bold;
@@ -21,20 +25,18 @@ button:hover{
     background-color: #6699FF;
 }
 
-h1 {
-    font-size: 3.5em;
-}
-
+h1 {font-size: 3.5em;}
 h2 {
     font-size: 2.7em;
+    font-family: 'Noto Serif', serif;
+    color: #6699FF;
+}
+h3 {font-size: 2.4em;
+    font-family: 'Noto Serif', serif;
 }
 
-h3 {
-    font-size: 2em;
-}
-
-p {
-    font-size: 1.25em;
+p {font-size: 1.25em;
+   font-family: 'Noto Serif', serif;
 }
 
 body {
@@ -91,7 +93,7 @@ header a:hover {
     justify-content: center;
     text-align: center;
     color: rgb(245,245,245);
-    height: 90vh;
+    height: 80vh;
     
     background-image: linear-gradient(
         0deg,
@@ -109,6 +111,18 @@ header a:hover {
     margin: 0;
 }
 
+#hero h2{
+    font-size: 1.7em;
+    color: #CCE6FF;
+    padding: 40px;
+}
+
+#hero h3{
+    font-size: 1.1em;
+    font-weight: lighter;
+    padding: 10px;
+}
+
 #conoceme{
     height: 50vh;
     display: flex;
@@ -119,34 +133,120 @@ header a:hover {
 }
 
 #conoceme h2{
-    padding: 30px;
-    
+    padding: 30px;   
 }
 
 #conoceme .container{
     text-align: center;
-    padding: 200px 12px;
+    padding: 70px 12px;
 }
 
 #mis_estudios{
+    
 }
 
 #mis_estudios .container{
     text-align: center;
-    padding: 100px 0px;
+    padding: 50px 0px;
 }
 
 #mis_estudios p{
     display: none;
 }
 
-#mis_estudios h2{
+#mis_estudios .estudios{
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-clip: padding-box;
+    background-size: cover;
+    color: #CCE6FF;
+    margin: 12px;
+    border-radius: 15px;
+}
+.estudios:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/imagenes/berlin_rio_spree.jpeg);
+}
+
+.estudios:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/imagenes/london_camden.jpeg);
+}
+
+.estudios:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/imagenes/roma_puente.jpeg);
+}
+
+#expe_laborales{
+    font-family: 'Noto Serif', serif;
+}
+
+#expe_laborales .container{
+    text-align: center;
+    padding: 50px 0px;
+}
+
+#expe_laborales p{
+    display: none;
+}
+
+#expe_laborales h2{
     margin-top: 0;
     padding: 20px;
 }
 
-#mis_estudios .estudios{
-    padding: 20px;
+#expe_laborales .trabajos{
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-clip: padding-box;
+    background-size: cover;
+    color: #CCE6FF;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+.trabajos:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/imagenes/barcelona_muelle.jpeg);
+}
+
+.trabajos:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/imagenes/paris_rio_sena.jpeg);
+}
+
+.trabajos:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/imagenes/paris_bridge.png);   
+}
+
+.trabajos:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(/imagenes/berlin_reichstag.jpeg);   
 }
 
 footer {
@@ -160,4 +260,56 @@ footer .container {
     text-align: center;
     padding: 12px;
     color: #6699FF;
+}
+
+@media (min-width: 770px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-right: 10px;
+    }
+
+    header a{
+        padding: 12px;
+    }
+
+    #hero .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #hero h2{
+        padding: 10px;
+    }
+
+    #hero .presentacion{
+        width: 60%;
+        max-width: 800px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+    }
+
+    #hero .img_container{
+        background-image: url("/imagenes/retrato_wb.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+        border-radius: 180px;
+    }
 }
