@@ -35,6 +35,10 @@ h3 {font-size: 2.4em;
     font-family: 'Noto Serif', serif;
 }
 
+h4 {font-size: 1.1em;
+    font-family: 'Noto Serif', serif;
+}
+
 p {font-size: 1.25em;
    font-family: 'Noto Serif', serif;
 }
@@ -150,8 +154,12 @@ header a:hover {
     padding: 50px 0px;
 }
 
-#mis_estudios p{
+#mis_estudios .hide{
     display: none;
+}
+
+.show{
+    display: block;        
 }
 
 #mis_estudios .estudios{
@@ -286,7 +294,7 @@ footer .container {
     #hero .container{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     #hero h2{
@@ -311,5 +319,50 @@ footer .container {
         width: 300px;
         margin-top: 20px;
         border-radius: 180px;
+    }
+
+    #mis_estudios .estudios_container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #mis_estudios .hide{
+        display: block;
+        padding: 15px;
+    }
+
+    #mis_estudios .estudios{
+        padding: 15px;
+    }
+
+    #mis_estudios button{
+        display: none;
+    }
+
+    #expe_laborales .expe_laborales_container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #expe_laborales h3{
+        font-size: 1.5vw;
+    }
+
+    #expe_laborales p{
+        display: block;
+        padding: 30px;
+    }
+
+    #expe_laborales .trabajos{
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+
+    #expe_laborales button{
+        display: none;
+    }
+
+    #contactame .container{
+        text-align: end;
     }
 }
