@@ -154,12 +154,8 @@ header a:hover {
     padding: 50px 0px;
 }
 
-#mis_estudios .hide{
+.hide{
     display: none;
-}
-
-.show{
-    display: block;        
 }
 
 #mis_estudios .estudios{
@@ -200,7 +196,7 @@ header a:hover {
     padding: 50px 0px;
 }
 
-#expe_laborales p{
+.hide2{
     display: none;
 }
 
@@ -326,7 +322,7 @@ footer .container {
         justify-content: space-evenly;
     }
 
-    #mis_estudios .hide{
+    .hide{
         display: block;
         padding: 15px;
     }
@@ -339,6 +335,11 @@ footer .container {
         display: none;
     }
 
+    .hide2{
+        display: block;
+        padding: 30px;
+    }
+
     #expe_laborales .expe_laborales_container{
         display: flex;
         justify-content: space-evenly;
@@ -346,11 +347,6 @@ footer .container {
 
     #expe_laborales h3{
         font-size: 1.5vw;
-    }
-
-    #expe_laborales p{
-        display: block;
-        padding: 30px;
     }
 
     #expe_laborales .trabajos{
